@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>MOS 實驗表單 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            
+    <h1 class="display-4">Mean-Opinion Score (MOS) Test</h1>
+    <p class="lead">Measuring quality of converted singing voice.</p>
+    <hr class="my-4">
+    <p>
+        Thank you so much for participating in this test!
+    </p>
+    <p>
+        Listen to the sample of computer generated singing voice and assess the quality of the audio based on how close it is to real singing recordings. 
+        For better results, please wear headphones and stay in a quite environment. 
+        For each audio, please select an option below to indicate its quality:
+        (本次测试要对计算机生成的歌唱音频做音质上的评估。该评估是判断生成的音频有多接近真实的歌唱录音数据。
+         请受试者在安静的环境下，使用耳机聆听，并根据每个音频的品质，给予以下几种评分：）
+        <ul>
+            <li>１（Unsatisfactory） Very annoying, distortion is objectionable.</li>
+            <li>1.5 (in-between Unsatisfactory and Poor) </li>
+            <li>２（Poor） Annoying distortion, but not objectionable.</li>
+            <li>2.5 (in-between Poor and Fair) </li>
+            <li>３（Fair） Perceptible distortion, slightly annoying.</li>
+            <li>3.5 (in-between Fair and Good) </li>
+            <li>４（Good） Slight perceptible level of distortion, but not annoying.</li>
+            <li>4.5 (in-between Good and Excellent) </li>
+            <li>５（Excellent） Imperceptible level of distortion.</li>
+        </ul>
+        In total, there are 6 compared systems; thus each group has 6 audios. 
+        In each group, samples from compared systems are randomly shuffled and a real singing recording is also included.
+        We suggest you first listen to all audio samples in each group and then give scores for better comparison. 
+        You are allowed to replay samples as you want. <b>Please remember to click the "Submit" botton after finishing</b>.
+        (一共有6个对比系统，所以每组实验有6个音频做对比；在每组中，各个系统的音频是随机排列的，其中有一个是真实的歌唱录音；
+         建议受试者可以先听完6个音频后，再根据彼此对比给出相应的分数；受试者可以重复听任何一句音频；
+         <b>在结束之前，请点击 "Submit" 按钮。</b>)
+        NB:  
+    </p>
+
+        </div>
+    </div>
+
+    <div class="container" id="form_container">
+        <form id="theForm" action="https://docs.google.com/forms/d/1MS4Swww0GRdQ0cta26-KL7pDViynW-pzDX0-Kdm1cpA/edit" method="GET" onsubmit="return preventRepeatedSubmission();">
+            <div class="form-group">
+                <label for="name">匿称：</label>
+                <input class="form-control" type="text" inputmode="text" name="name" required>
+                <small class="form-text text-muted">必填*</small>
+            </div>
+            
+    
+        <div class="card form-group">
+            <div class="card-header">Group１- Audio1</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/2/JTAN_sing_15-chunk-11_ADIZ_18_f0factor1.8_ldfactor0.0.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                Text: 
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_1" value="1" required>
+                    <label class="form-check-label" for="g1-q2_1">１（Unsatisfactory）</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_1.5" value="1.5" required>
+                    <label class="form-check-label" for="g1-q2_1.5">1.5 (in-between Unsatisfactory and Poor) </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_2" value="2" required>
+                    <label class="form-check-label" for="g1-q2_2">２（Poor）</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_2.5" value="2.5" required>
+                    <label class="form-check-label" for="g1-q2_2.5">2.5 (in-between Poor and Fair)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_3" value="3" required>
+                    <label class="form-check-label" for="g1-q2_3">３（Fair）</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_3.5" value="3.5" required>
+                    <label class="form-check-label" for="g1-q2_3.5">3.5 (in-between Fair and Good)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_4" value="4" required>
+                    <label class="form-check-label" for="g1-q2_4">４（Good）</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_4.5" value="4.5" required>
+                    <label class="form-check-label" for="g1-q2_4.5">4.5 (in-between Good and Excellent)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_5" value="5" required>
+                    <label class="form-check-label" for="g1-q2_5">５（Excellent）</label>
+                </div>
+            </div>
+        </div>
+    
+
+            <input type="text" name="formid" value="1" hidden>
+            <input type="text" name="thank" value="已完成, 谢谢！" hidden>
+            <input class="btn btn-info btn-lg" type="submit" value="提交结果" id="submitBtn">
+            <p class="text-muted">
+                <small>如果提交结果时发现缴不出去，请回头检查是否有填入匿称、是否每一题都有作答到，谢谢。</small>
+            </p>
+        </form>
+    </div>
+
+    <div class="container" style="padding-top: 60px;">
+        <p class="text-center text-muted">&copy; Tencent AI Lab</p>
+    </div>
+
+    <script type="text/javascript">
+        function preventRepeatedSubmission() {
+            document.getElementById('submitBtn').disabled = true;
+            setTimeout("submitBtn.disabled=false;", 5000);
+            return true;
+        };
+    </script>
+</body>
+
+</html>
