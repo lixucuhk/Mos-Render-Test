@@ -1,0 +1,1730 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>語者判別實驗表單 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            
+    <h1 class="display-4">Speaker Similarity Test</h1>
+    <p class="lead">Measuring whether two audios belong to the same person.</p>
+    <hr class="my-4">
+    <p>
+        Thank you so much for participating in this test!
+    </p>
+    <p>
+        In this test, we have computer-converted singing audios and real singing recordings.
+        Each question has two audios. Please listen the two audios and answer the question based on the speaker similarity of the two audios (<b>Only consider the speaker similarity; Audio quality, content and pitch are not taken into account</b>).
+        (在这个实验中，我们有机器生成的歌唱音频和真实的歌唱录音；每个问题下有2个音频，请判断2个音频的说话者相似度。<b>在此，我们仅考虑说话者相似度，不考虑音频的音质、内容和音高等其他信息。</b>)
+    </p>
+    <p>
+        Options:
+        <ul>
+            <li>確定是同一個語者 (same, absolutely sure)</li>
+            <li>不大確定，但傾向認為是同一個語者 (same, not sure)</li>
+            <li>不大確定，但傾向認為是不同語者 (different, not sure)</li>
+            <li>確定是不同語者 (different, absolutely sure)</li>
+        </ul>
+        <b> Please remember to click the "Submit" botton after finishing.</b>
+        (<b>在结束之前，请点击 "Submit" 按钮。</b>)
+    </p>
+
+        </div>
+    </div>
+
+    <div class="container" id="form_container">
+        <form id="theForm" action="http://localhost:8888" method="GET" onsubmit="return preventRepeatedSubmission();">
+            <div class="form-group">
+                <label for="name">匿称：</label>
+                <input class="form-control" type="text" inputmode="text" name="name" required>
+                <small class="form-text text-muted">必填*</small>
+            </div>
+            
+    
+        <div class="card form-group">
+            <div class="card-header">Group１- Audio1</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_1" value="1" required>
+                    <label class="form-check-label" for="g1-q2_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_2" value="2" required>
+                    <label class="form-check-label" for="g1-q2_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_3" value="3" required>
+                    <label class="form-check-label" for="g1-q2_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_4" value="4" required>
+                    <label class="form-check-label" for="g1-q2_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group１- Audio2</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q0" id="g1-q0_1" value="1" required>
+                    <label class="form-check-label" for="g1-q0_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q0" id="g1-q0_2" value="2" required>
+                    <label class="form-check-label" for="g1-q0_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q0" id="g1-q0_3" value="3" required>
+                    <label class="form-check-label" for="g1-q0_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q0" id="g1-q0_4" value="4" required>
+                    <label class="form-check-label" for="g1-q0_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group１- Audio3</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q3" id="g1-q3_1" value="1" required>
+                    <label class="form-check-label" for="g1-q3_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q3" id="g1-q3_2" value="2" required>
+                    <label class="form-check-label" for="g1-q3_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q3" id="g1-q3_3" value="3" required>
+                    <label class="form-check-label" for="g1-q3_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q3" id="g1-q3_4" value="4" required>
+                    <label class="form-check-label" for="g1-q3_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group１- Audio4</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q4" id="g1-q4_1" value="1" required>
+                    <label class="form-check-label" for="g1-q4_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q4" id="g1-q4_2" value="2" required>
+                    <label class="form-check-label" for="g1-q4_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q4" id="g1-q4_3" value="3" required>
+                    <label class="form-check-label" for="g1-q4_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q4" id="g1-q4_4" value="4" required>
+                    <label class="form-check-label" for="g1-q4_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group１- Audio5</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q5" id="g1-q5_1" value="1" required>
+                    <label class="form-check-label" for="g1-q5_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q5" id="g1-q5_2" value="2" required>
+                    <label class="form-check-label" for="g1-q5_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q5" id="g1-q5_3" value="3" required>
+                    <label class="form-check-label" for="g1-q5_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q5" id="g1-q5_4" value="4" required>
+                    <label class="form-check-label" for="g1-q5_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group１- Audio6</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q1" id="g1-q1_1" value="1" required>
+                    <label class="form-check-label" for="g1-q1_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q1" id="g1-q1_2" value="2" required>
+                    <label class="form-check-label" for="g1-q1_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q1" id="g1-q1_3" value="3" required>
+                    <label class="form-check-label" for="g1-q1_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q1" id="g1-q1_4" value="4" required>
+                    <label class="form-check-label" for="g1-q1_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group2 - Audio1</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q2" id="g2-q2_1" value="1" required>
+                    <label class="form-check-label" for="g2-q2_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q2" id="g2-q2_2" value="2" required>
+                    <label class="form-check-label" for="g2-q2_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q2" id="g2-q2_3" value="3" required>
+                    <label class="form-check-label" for="g2-q2_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q2" id="g2-q2_4" value="4" required>
+                    <label class="form-check-label" for="g2-q2_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group2 - Audio2</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q3" id="g2-q3_1" value="1" required>
+                    <label class="form-check-label" for="g2-q3_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q3" id="g2-q3_2" value="2" required>
+                    <label class="form-check-label" for="g2-q3_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q3" id="g2-q3_3" value="3" required>
+                    <label class="form-check-label" for="g2-q3_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q3" id="g2-q3_4" value="4" required>
+                    <label class="form-check-label" for="g2-q3_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group2 - Audio3</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q4" id="g2-q4_1" value="1" required>
+                    <label class="form-check-label" for="g2-q4_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q4" id="g2-q4_2" value="2" required>
+                    <label class="form-check-label" for="g2-q4_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q4" id="g2-q4_3" value="3" required>
+                    <label class="form-check-label" for="g2-q4_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q4" id="g2-q4_4" value="4" required>
+                    <label class="form-check-label" for="g2-q4_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group2 - Audio4</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q0" id="g2-q0_1" value="1" required>
+                    <label class="form-check-label" for="g2-q0_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q0" id="g2-q0_2" value="2" required>
+                    <label class="form-check-label" for="g2-q0_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q0" id="g2-q0_3" value="3" required>
+                    <label class="form-check-label" for="g2-q0_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q0" id="g2-q0_4" value="4" required>
+                    <label class="form-check-label" for="g2-q0_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group2 - Audio5</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q1" id="g2-q1_1" value="1" required>
+                    <label class="form-check-label" for="g2-q1_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q1" id="g2-q1_2" value="2" required>
+                    <label class="form-check-label" for="g2-q1_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q1" id="g2-q1_3" value="3" required>
+                    <label class="form-check-label" for="g2-q1_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q1" id="g2-q1_4" value="4" required>
+                    <label class="form-check-label" for="g2-q1_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group2- Audio6</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q5" id="g2-q5_1" value="1" required>
+                    <label class="form-check-label" for="g2-q5_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q5" id="g2-q5_2" value="2" required>
+                    <label class="form-check-label" for="g2-q5_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q5" id="g2-q5_3" value="3" required>
+                    <label class="form-check-label" for="g2-q5_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g2-q5" id="g2-q5_4" value="4" required>
+                    <label class="form-check-label" for="g2-q5_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group3 - Audio1</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q3" id="g3-q3_1" value="1" required>
+                    <label class="form-check-label" for="g3-q3_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q3" id="g3-q3_2" value="2" required>
+                    <label class="form-check-label" for="g3-q3_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q3" id="g3-q3_3" value="3" required>
+                    <label class="form-check-label" for="g3-q3_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q3" id="g3-q3_4" value="4" required>
+                    <label class="form-check-label" for="g3-q3_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group3 - Audio2</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q4" id="g3-q4_1" value="1" required>
+                    <label class="form-check-label" for="g3-q4_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q4" id="g3-q4_2" value="2" required>
+                    <label class="form-check-label" for="g3-q4_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q4" id="g3-q4_3" value="3" required>
+                    <label class="form-check-label" for="g3-q4_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q4" id="g3-q4_4" value="4" required>
+                    <label class="form-check-label" for="g3-q4_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group3 - Audio3</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q5" id="g3-q5_1" value="1" required>
+                    <label class="form-check-label" for="g3-q5_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q5" id="g3-q5_2" value="2" required>
+                    <label class="form-check-label" for="g3-q5_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q5" id="g3-q5_3" value="3" required>
+                    <label class="form-check-label" for="g3-q5_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q5" id="g3-q5_4" value="4" required>
+                    <label class="form-check-label" for="g3-q5_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group3 - Audio4</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q0" id="g3-q0_1" value="1" required>
+                    <label class="form-check-label" for="g3-q0_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q0" id="g3-q0_2" value="2" required>
+                    <label class="form-check-label" for="g3-q0_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q0" id="g3-q0_3" value="3" required>
+                    <label class="form-check-label" for="g3-q0_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q0" id="g3-q0_4" value="4" required>
+                    <label class="form-check-label" for="g3-q0_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group3 - Audio5</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q1" id="g3-q1_1" value="1" required>
+                    <label class="form-check-label" for="g3-q1_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q1" id="g3-q1_2" value="2" required>
+                    <label class="form-check-label" for="g3-q1_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q1" id="g3-q1_3" value="3" required>
+                    <label class="form-check-label" for="g3-q1_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q1" id="g3-q1_4" value="4" required>
+                    <label class="form-check-label" for="g3-q1_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group3 - Audio6</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q2" id="g3-q2_1" value="1" required>
+                    <label class="form-check-label" for="g3-q2_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q2" id="g3-q2_2" value="2" required>
+                    <label class="form-check-label" for="g3-q2_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q2" id="g3-q2_3" value="3" required>
+                    <label class="form-check-label" for="g3-q2_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g3-q2" id="g3-q2_4" value="4" required>
+                    <label class="form-check-label" for="g3-q2_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group4 - Audio１</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q0" id="g4-q0_1" value="1" required>
+                    <label class="form-check-label" for="g4-q0_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q0" id="g4-q0_2" value="2" required>
+                    <label class="form-check-label" for="g4-q0_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q0" id="g4-q0_3" value="3" required>
+                    <label class="form-check-label" for="g4-q0_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q0" id="g4-q0_4" value="4" required>
+                    <label class="form-check-label" for="g4-q0_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group4 - Audio2</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q1" id="g4-q1_1" value="1" required>
+                    <label class="form-check-label" for="g4-q1_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q1" id="g4-q1_2" value="2" required>
+                    <label class="form-check-label" for="g4-q1_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q1" id="g4-q1_3" value="3" required>
+                    <label class="form-check-label" for="g4-q1_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q1" id="g4-q1_4" value="4" required>
+                    <label class="form-check-label" for="g4-q1_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group4 - Audio3</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q2" id="g4-q2_1" value="1" required>
+                    <label class="form-check-label" for="g4-q2_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q2" id="g4-q2_2" value="2" required>
+                    <label class="form-check-label" for="g4-q2_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q2" id="g4-q2_3" value="3" required>
+                    <label class="form-check-label" for="g4-q2_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q2" id="g4-q2_4" value="4" required>
+                    <label class="form-check-label" for="g4-q2_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group4 - Audio4</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q3" id="g4-q3_1" value="1" required>
+                    <label class="form-check-label" for="g4-q3_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q3" id="g4-q3_2" value="2" required>
+                    <label class="form-check-label" for="g4-q3_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q3" id="g4-q3_3" value="3" required>
+                    <label class="form-check-label" for="g4-q3_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q3" id="g4-q3_4" value="4" required>
+                    <label class="form-check-label" for="g4-q3_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group4 - Audio5</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q4" id="g4-q4_1" value="1" required>
+                    <label class="form-check-label" for="g4-q4_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q4" id="g4-q4_2" value="2" required>
+                    <label class="form-check-label" for="g4-q4_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q4" id="g4-q4_3" value="3" required>
+                    <label class="form-check-label" for="g4-q4_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q4" id="g4-q4_4" value="4" required>
+                    <label class="form-check-label" for="g4-q4_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group4 - Audio6</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q5" id="g4-q5_1" value="1" required>
+                    <label class="form-check-label" for="g4-q5_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q5" id="g4-q5_2" value="2" required>
+                    <label class="form-check-label" for="g4-q5_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q5" id="g4-q5_3" value="3" required>
+                    <label class="form-check-label" for="g4-q5_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g4-q5" id="g4-q5_4" value="4" required>
+                    <label class="form-check-label" for="g4-q5_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group5 - Audio1</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q2" id="g5-q2_1" value="1" required>
+                    <label class="form-check-label" for="g5-q2_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q2" id="g5-q2_2" value="2" required>
+                    <label class="form-check-label" for="g5-q2_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q2" id="g5-q2_3" value="3" required>
+                    <label class="form-check-label" for="g5-q2_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q2" id="g5-q2_4" value="4" required>
+                    <label class="form-check-label" for="g5-q2_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group5 - Audio2</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q3" id="g5-q3_1" value="1" required>
+                    <label class="form-check-label" for="g5-q3_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q3" id="g5-q3_2" value="2" required>
+                    <label class="form-check-label" for="g5-q3_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q3" id="g5-q3_3" value="3" required>
+                    <label class="form-check-label" for="g5-q3_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q3" id="g5-q3_4" value="4" required>
+                    <label class="form-check-label" for="g5-q3_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group5 - Audio3</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q0" id="g5-q0_1" value="1" required>
+                    <label class="form-check-label" for="g5-q0_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q0" id="g5-q0_2" value="2" required>
+                    <label class="form-check-label" for="g5-q0_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q0" id="g5-q0_3" value="3" required>
+                    <label class="form-check-label" for="g5-q0_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q0" id="g5-q0_4" value="4" required>
+                    <label class="form-check-label" for="g5-q0_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group5 - Audio4</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q1" id="g5-q1_1" value="1" required>
+                    <label class="form-check-label" for="g5-q1_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q1" id="g5-q1_2" value="2" required>
+                    <label class="form-check-label" for="g5-q1_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q1" id="g5-q1_3" value="3" required>
+                    <label class="form-check-label" for="g5-q1_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q1" id="g5-q1_4" value="4" required>
+                    <label class="form-check-label" for="g5-q1_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group5 - Audio5</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q4" id="g5-q4_1" value="1" required>
+                    <label class="form-check-label" for="g5-q4_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q4" id="g5-q4_2" value="2" required>
+                    <label class="form-check-label" for="g5-q4_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q4" id="g5-q4_3" value="3" required>
+                    <label class="form-check-label" for="g5-q4_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q4" id="g5-q4_4" value="4" required>
+                    <label class="form-check-label" for="g5-q4_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group5 - Audio6</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q5" id="g5-q5_1" value="1" required>
+                    <label class="form-check-label" for="g5-q5_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q5" id="g5-q5_2" value="2" required>
+                    <label class="form-check-label" for="g5-q5_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q5" id="g5-q5_3" value="3" required>
+                    <label class="form-check-label" for="g5-q5_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g5-q5" id="g5-q5_4" value="4" required>
+                    <label class="form-check-label" for="g5-q5_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group6 - Audio1</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q1" id="g6-q1_1" value="1" required>
+                    <label class="form-check-label" for="g6-q1_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q1" id="g6-q1_2" value="2" required>
+                    <label class="form-check-label" for="g6-q1_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q1" id="g6-q1_3" value="3" required>
+                    <label class="form-check-label" for="g6-q1_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q1" id="g6-q1_4" value="4" required>
+                    <label class="form-check-label" for="g6-q1_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group6 - Audio2</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q4" id="g6-q4_1" value="1" required>
+                    <label class="form-check-label" for="g6-q4_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q4" id="g6-q4_2" value="2" required>
+                    <label class="form-check-label" for="g6-q4_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q4" id="g6-q4_3" value="3" required>
+                    <label class="form-check-label" for="g6-q4_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q4" id="g6-q4_4" value="4" required>
+                    <label class="form-check-label" for="g6-q4_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group6 - Audio3</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q5" id="g6-q5_1" value="1" required>
+                    <label class="form-check-label" for="g6-q5_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q5" id="g6-q5_2" value="2" required>
+                    <label class="form-check-label" for="g6-q5_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q5" id="g6-q5_3" value="3" required>
+                    <label class="form-check-label" for="g6-q5_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q5" id="g6-q5_4" value="4" required>
+                    <label class="form-check-label" for="g6-q5_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group6 - Audio4</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q0" id="g6-q0_1" value="1" required>
+                    <label class="form-check-label" for="g6-q0_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q0" id="g6-q0_2" value="2" required>
+                    <label class="form-check-label" for="g6-q0_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q0" id="g6-q0_3" value="3" required>
+                    <label class="form-check-label" for="g6-q0_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q0" id="g6-q0_4" value="4" required>
+                    <label class="form-check-label" for="g6-q0_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group6 - Audio5</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q2" id="g6-q2_1" value="1" required>
+                    <label class="form-check-label" for="g6-q2_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q2" id="g6-q2_2" value="2" required>
+                    <label class="form-check-label" for="g6-q2_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q2" id="g6-q2_3" value="3" required>
+                    <label class="form-check-label" for="g6-q2_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q2" id="g6-q2_4" value="4" required>
+                    <label class="form-check-label" for="g6-q2_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group6 - Audio6</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q3" id="g6-q3_1" value="1" required>
+                    <label class="form-check-label" for="g6-q3_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q3" id="g6-q3_2" value="2" required>
+                    <label class="form-check-label" for="g6-q3_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q3" id="g6-q3_3" value="3" required>
+                    <label class="form-check-label" for="g6-q3_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g6-q3" id="g6-q3_4" value="4" required>
+                    <label class="form-check-label" for="g6-q3_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group7 - Audio1</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q1" id="g7-q1_1" value="1" required>
+                    <label class="form-check-label" for="g7-q1_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q1" id="g7-q1_2" value="2" required>
+                    <label class="form-check-label" for="g7-q1_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q1" id="g7-q1_3" value="3" required>
+                    <label class="form-check-label" for="g7-q1_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q1" id="g7-q1_4" value="4" required>
+                    <label class="form-check-label" for="g7-q1_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group7 - Audio2</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q2" id="g7-q2_1" value="1" required>
+                    <label class="form-check-label" for="g7-q2_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q2" id="g7-q2_2" value="2" required>
+                    <label class="form-check-label" for="g7-q2_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q2" id="g7-q2_3" value="3" required>
+                    <label class="form-check-label" for="g7-q2_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q2" id="g7-q2_4" value="4" required>
+                    <label class="form-check-label" for="g7-q2_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group7 - Audio3</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q0" id="g7-q0_1" value="1" required>
+                    <label class="form-check-label" for="g7-q0_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q0" id="g7-q0_2" value="2" required>
+                    <label class="form-check-label" for="g7-q0_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q0" id="g7-q0_3" value="3" required>
+                    <label class="form-check-label" for="g7-q0_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q0" id="g7-q0_4" value="4" required>
+                    <label class="form-check-label" for="g7-q0_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group7 - Audio4</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q3" id="g7-q3_1" value="1" required>
+                    <label class="form-check-label" for="g7-q3_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q3" id="g7-q3_2" value="2" required>
+                    <label class="form-check-label" for="g7-q3_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q3" id="g7-q3_3" value="3" required>
+                    <label class="form-check-label" for="g7-q3_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q3" id="g7-q3_4" value="4" required>
+                    <label class="form-check-label" for="g7-q3_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group7 - Audio5</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q5" id="g7-q5_1" value="1" required>
+                    <label class="form-check-label" for="g7-q5_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q5" id="g7-q5_2" value="2" required>
+                    <label class="form-check-label" for="g7-q5_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q5" id="g7-q5_3" value="3" required>
+                    <label class="form-check-label" for="g7-q5_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q5" id="g7-q5_4" value="4" required>
+                    <label class="form-check-label" for="g7-q5_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group7 - Audio6</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q4" id="g7-q4_1" value="1" required>
+                    <label class="form-check-label" for="g7-q4_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q4" id="g7-q4_2" value="2" required>
+                    <label class="form-check-label" for="g7-q4_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q4" id="g7-q4_3" value="3" required>
+                    <label class="form-check-label" for="g7-q4_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g7-q4" id="g7-q4_4" value="4" required>
+                    <label class="form-check-label" for="g7-q4_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group8 - Audio1</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q4" id="g8-q4_1" value="1" required>
+                    <label class="form-check-label" for="g8-q4_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q4" id="g8-q4_2" value="2" required>
+                    <label class="form-check-label" for="g8-q4_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q4" id="g8-q4_3" value="3" required>
+                    <label class="form-check-label" for="g8-q4_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q4" id="g8-q4_4" value="4" required>
+                    <label class="form-check-label" for="g8-q4_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group8 - Audio2</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q1" id="g8-q1_1" value="1" required>
+                    <label class="form-check-label" for="g8-q1_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q1" id="g8-q1_2" value="2" required>
+                    <label class="form-check-label" for="g8-q1_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q1" id="g8-q1_3" value="3" required>
+                    <label class="form-check-label" for="g8-q1_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q1" id="g8-q1_4" value="4" required>
+                    <label class="form-check-label" for="g8-q1_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group8- Audio3</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q2" id="g8-q2_1" value="1" required>
+                    <label class="form-check-label" for="g8-q2_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q2" id="g8-q2_2" value="2" required>
+                    <label class="form-check-label" for="g8-q2_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q2" id="g8-q2_3" value="3" required>
+                    <label class="form-check-label" for="g8-q2_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q2" id="g8-q2_4" value="4" required>
+                    <label class="form-check-label" for="g8-q2_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group8 - Audio4</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q0" id="g8-q0_1" value="1" required>
+                    <label class="form-check-label" for="g8-q0_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q0" id="g8-q0_2" value="2" required>
+                    <label class="form-check-label" for="g8-q0_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q0" id="g8-q0_3" value="3" required>
+                    <label class="form-check-label" for="g8-q0_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q0" id="g8-q0_4" value="4" required>
+                    <label class="form-check-label" for="g8-q0_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group8 - Audio5</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q3" id="g8-q3_1" value="1" required>
+                    <label class="form-check-label" for="g8-q3_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q3" id="g8-q3_2" value="2" required>
+                    <label class="form-check-label" for="g8-q3_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q3" id="g8-q3_3" value="3" required>
+                    <label class="form-check-label" for="g8-q3_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q3" id="g8-q3_4" value="4" required>
+                    <label class="form-check-label" for="g8-q3_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group8 - Audio6</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q5" id="g8-q5_1" value="1" required>
+                    <label class="form-check-label" for="g8-q5_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q5" id="g8-q5_2" value="2" required>
+                    <label class="form-check-label" for="g8-q5_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q5" id="g8-q5_3" value="3" required>
+                    <label class="form-check-label" for="g8-q5_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g8-q5" id="g8-q5_4" value="4" required>
+                    <label class="form-check-label" for="g8-q5_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group9 - Audio1</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q1" id="g9-q1_1" value="1" required>
+                    <label class="form-check-label" for="g9-q1_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q1" id="g9-q1_2" value="2" required>
+                    <label class="form-check-label" for="g9-q1_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q1" id="g9-q1_3" value="3" required>
+                    <label class="form-check-label" for="g9-q1_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q1" id="g9-q1_4" value="4" required>
+                    <label class="form-check-label" for="g9-q1_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group9 - Audio2</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q0" id="g9-q0_1" value="1" required>
+                    <label class="form-check-label" for="g9-q0_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q0" id="g9-q0_2" value="2" required>
+                    <label class="form-check-label" for="g9-q0_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q0" id="g9-q0_3" value="3" required>
+                    <label class="form-check-label" for="g9-q0_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q0" id="g9-q0_4" value="4" required>
+                    <label class="form-check-label" for="g9-q0_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group9 - Audio3</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q2" id="g9-q2_1" value="1" required>
+                    <label class="form-check-label" for="g9-q2_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q2" id="g9-q2_2" value="2" required>
+                    <label class="form-check-label" for="g9-q2_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q2" id="g9-q2_3" value="3" required>
+                    <label class="form-check-label" for="g9-q2_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q2" id="g9-q2_4" value="4" required>
+                    <label class="form-check-label" for="g9-q2_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group9 - Audio4</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q4" id="g9-q4_1" value="1" required>
+                    <label class="form-check-label" for="g9-q4_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q4" id="g9-q4_2" value="2" required>
+                    <label class="form-check-label" for="g9-q4_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q4" id="g9-q4_3" value="3" required>
+                    <label class="form-check-label" for="g9-q4_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q4" id="g9-q4_4" value="4" required>
+                    <label class="form-check-label" for="g9-q4_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group9 - Audio5</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q5" id="g9-q5_1" value="1" required>
+                    <label class="form-check-label" for="g9-q5_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q5" id="g9-q5_2" value="2" required>
+                    <label class="form-check-label" for="g9-q5_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q5" id="g9-q5_3" value="3" required>
+                    <label class="form-check-label" for="g9-q5_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q5" id="g9-q5_4" value="4" required>
+                    <label class="form-check-label" for="g9-q5_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group9 - Audio6</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q3" id="g9-q3_1" value="1" required>
+                    <label class="form-check-label" for="g9-q3_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q3" id="g9-q3_2" value="2" required>
+                    <label class="form-check-label" for="g9-q3_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q3" id="g9-q3_3" value="3" required>
+                    <label class="form-check-label" for="g9-q3_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g9-q3" id="g9-q3_4" value="4" required>
+                    <label class="form-check-label" for="g9-q3_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group10 - Audio1</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q2" id="g10-q2_1" value="1" required>
+                    <label class="form-check-label" for="g10-q2_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q2" id="g10-q2_2" value="2" required>
+                    <label class="form-check-label" for="g10-q2_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q2" id="g10-q2_3" value="3" required>
+                    <label class="form-check-label" for="g10-q2_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q2" id="g10-q2_4" value="4" required>
+                    <label class="form-check-label" for="g10-q2_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group10 - Audio2</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q5" id="g10-q5_1" value="1" required>
+                    <label class="form-check-label" for="g10-q5_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q5" id="g10-q5_2" value="2" required>
+                    <label class="form-check-label" for="g10-q5_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q5" id="g10-q5_3" value="3" required>
+                    <label class="form-check-label" for="g10-q5_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q5" id="g10-q5_4" value="4" required>
+                    <label class="form-check-label" for="g10-q5_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group10 - Audio3</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q0" id="g10-q0_1" value="1" required>
+                    <label class="form-check-label" for="g10-q0_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q0" id="g10-q0_2" value="2" required>
+                    <label class="form-check-label" for="g10-q0_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q0" id="g10-q0_3" value="3" required>
+                    <label class="form-check-label" for="g10-q0_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q0" id="g10-q0_4" value="4" required>
+                    <label class="form-check-label" for="g10-q0_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group10 - Audio4</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q1" id="g10-q1_1" value="1" required>
+                    <label class="form-check-label" for="g10-q1_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q1" id="g10-q1_2" value="2" required>
+                    <label class="form-check-label" for="g10-q1_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q1" id="g10-q1_3" value="3" required>
+                    <label class="form-check-label" for="g10-q1_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q1" id="g10-q1_4" value="4" required>
+                    <label class="form-check-label" for="g10-q1_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group10 - Audio5</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q3" id="g10-q3_1" value="1" required>
+                    <label class="form-check-label" for="g10-q3_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q3" id="g10-q3_2" value="2" required>
+                    <label class="form-check-label" for="g10-q3_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q3" id="g10-q3_3" value="3" required>
+                    <label class="form-check-label" for="g10-q3_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q3" id="g10-q3_4" value="4" required>
+                    <label class="form-check-label" for="g10-q3_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group10 - Audio6</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q4" id="g10-q4_1" value="1" required>
+                    <label class="form-check-label" for="g10-q4_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q4" id="g10-q4_2" value="2" required>
+                    <label class="form-check-label" for="g10-q4_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q4" id="g10-q4_3" value="3" required>
+                    <label class="form-check-label" for="g10-q4_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g10-q4" id="g10-q4_4" value="4" required>
+                    <label class="form-check-label" for="g10-q4_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group11 - Audio1</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q3" id="g11-q3_1" value="1" required>
+                    <label class="form-check-label" for="g11-q3_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q3" id="g11-q3_2" value="2" required>
+                    <label class="form-check-label" for="g11-q3_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q3" id="g11-q3_3" value="3" required>
+                    <label class="form-check-label" for="g11-q3_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q3" id="g11-q3_4" value="4" required>
+                    <label class="form-check-label" for="g11-q3_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group11 - Audio2</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q4" id="g11-q4_1" value="1" required>
+                    <label class="form-check-label" for="g11-q4_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q4" id="g11-q4_2" value="2" required>
+                    <label class="form-check-label" for="g11-q4_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q4" id="g11-q4_3" value="3" required>
+                    <label class="form-check-label" for="g11-q4_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q4" id="g11-q4_4" value="4" required>
+                    <label class="form-check-label" for="g11-q4_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group11 - Audio3</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q5" id="g11-q5_1" value="1" required>
+                    <label class="form-check-label" for="g11-q5_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q5" id="g11-q5_2" value="2" required>
+                    <label class="form-check-label" for="g11-q5_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q5" id="g11-q5_3" value="3" required>
+                    <label class="form-check-label" for="g11-q5_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q5" id="g11-q5_4" value="4" required>
+                    <label class="form-check-label" for="g11-q5_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group11 - Audio4</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q0" id="g11-q0_1" value="1" required>
+                    <label class="form-check-label" for="g11-q0_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q0" id="g11-q0_2" value="2" required>
+                    <label class="form-check-label" for="g11-q0_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q0" id="g11-q0_3" value="3" required>
+                    <label class="form-check-label" for="g11-q0_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q0" id="g11-q0_4" value="4" required>
+                    <label class="form-check-label" for="g11-q0_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group11 - Audio5</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q1" id="g11-q1_1" value="1" required>
+                    <label class="form-check-label" for="g11-q1_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q1" id="g11-q1_2" value="2" required>
+                    <label class="form-check-label" for="g11-q1_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q1" id="g11-q1_3" value="3" required>
+                    <label class="form-check-label" for="g11-q1_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q1" id="g11-q1_4" value="4" required>
+                    <label class="form-check-label" for="g11-q1_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group11 - Audio6</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q2" id="g11-q2_1" value="1" required>
+                    <label class="form-check-label" for="g11-q2_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q2" id="g11-q2_2" value="2" required>
+                    <label class="form-check-label" for="g11-q2_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q2" id="g11-q2_3" value="3" required>
+                    <label class="form-check-label" for="g11-q2_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g11-q2" id="g11-q2_4" value="4" required>
+                    <label class="form-check-label" for="g11-q2_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group12 - Audio1</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q0" id="g12-q0_1" value="1" required>
+                    <label class="form-check-label" for="g12-q0_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q0" id="g12-q0_2" value="2" required>
+                    <label class="form-check-label" for="g12-q0_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q0" id="g12-q0_3" value="3" required>
+                    <label class="form-check-label" for="g12-q0_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q0" id="g12-q0_4" value="4" required>
+                    <label class="form-check-label" for="g12-q0_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group12 - Audio2</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q3" id="g12-q3_1" value="1" required>
+                    <label class="form-check-label" for="g12-q3_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q3" id="g12-q3_2" value="2" required>
+                    <label class="form-check-label" for="g12-q3_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q3" id="g12-q3_3" value="3" required>
+                    <label class="form-check-label" for="g12-q3_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q3" id="g12-q3_4" value="4" required>
+                    <label class="form-check-label" for="g12-q3_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group12 - Audio3</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q4" id="g12-q4_1" value="1" required>
+                    <label class="form-check-label" for="g12-q4_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q4" id="g12-q4_2" value="2" required>
+                    <label class="form-check-label" for="g12-q4_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q4" id="g12-q4_3" value="3" required>
+                    <label class="form-check-label" for="g12-q4_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q4" id="g12-q4_4" value="4" required>
+                    <label class="form-check-label" for="g12-q4_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group12 - Audio4</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q1" id="g12-q1_1" value="1" required>
+                    <label class="form-check-label" for="g12-q1_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q1" id="g12-q1_2" value="2" required>
+                    <label class="form-check-label" for="g12-q1_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q1" id="g12-q1_3" value="3" required>
+                    <label class="form-check-label" for="g12-q1_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q1" id="g12-q1_4" value="4" required>
+                    <label class="form-check-label" for="g12-q1_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group12 - Audio5</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q2" id="g12-q2_1" value="1" required>
+                    <label class="form-check-label" for="g12-q2_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q2" id="g12-q2_2" value="2" required>
+                    <label class="form-check-label" for="g12-q2_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q2" id="g12-q2_3" value="3" required>
+                    <label class="form-check-label" for="g12-q2_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q2" id="g12-q2_4" value="4" required>
+                    <label class="form-check-label" for="g12-q2_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group12 - Audio6</div>
+            <div class="card-body">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q5" id="g12-q5_1" value="1" required>
+                    <label class="form-check-label" for="g12-q5_1">確定是同一個語者 (same, absolutely sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q5" id="g12-q5_2" value="2" required>
+                    <label class="form-check-label" for="g12-q5_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q5" id="g12-q5_3" value="3" required>
+                    <label class="form-check-label" for="g12-q5_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g12-q5" id="g12-q5_4" value="4" required>
+                    <label class="form-check-label" for="g12-q5_4">確定是不同語者 (different, absolutely sure)</label>
+                </div>
+            </div>
+        </div>
+    
+
+            <input type="text" name="formid" value="1" hidden>
+            <input type="text" name="thank" value="已完成, 谢谢！" hidden>
+            <input class="btn btn-info btn-lg" type="submit" value="提交结果" id="submitBtn">
+            <p class="text-muted">
+                <small>如果提交结果时发现缴不出去，请回头检查是否有填入匿称、是否每一题都有作答到，谢谢。</small>
+            </p>
+        </form>
+    </div>
+
+    <div class="container" style="padding-top: 60px;">
+        <p class="text-center text-muted">&copy; Tencent AI Lab</p>
+    </div>
+
+    <script type="text/javascript">
+        function preventRepeatedSubmission() {
+            document.getElementById('submitBtn').disabled = true;
+            setTimeout("submitBtn.disabled=false;", 5000);
+            return true;
+        };
+    </script>
+</body>
+
+</html>
