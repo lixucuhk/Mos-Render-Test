@@ -1,22 +1,26 @@
 {% extends "base.html.jinja2" %}
 {% block heading %}
-    <h1 class="display-4">語者判別實驗</h1>
-    <p class="lead">判斷兩份語音是否出自同一個人</p>
+    <h1 class="display-4">Speaker Similarity Test</h1>
+    <p class="lead">Measuring whether two audios belong to the same person.</p>
     <hr class="my-4">
     <p>
-        感謝您參與本次實驗！
+        Thank you so much for participating in this test!
     </p>
     <p>
-        在這個實驗中，我們使用電腦合成及轉換人類語音。每一題都有兩個音檔，請使用耳機聽完後，根據兩個音檔的語者相似度作答（僅考慮說話者的音色，不須考慮語句內容）。
+        In this test, we have computer-converted singing audios and real singing recordings.
+        Each question has two audios. Please listen the two audios and answer the question based on the speaker similarity of the two audios (<b>Only consider the speaker similarity; Audio quality, content and pitch are not taken into account</b>).
+        (在这个实验中，我们有机器生成的歌唱音频和真实的歌唱录音；每个问题下有2个音频，请判断2个音频的说话者相似度。<b>在此，我们仅考虑说话者相似度，不考虑音频的音质、内容和音高等其他信息。</b>)
     </p>
     <p>
-        評分標準為：
+        Options:
         <ul>
             <li>確定是同一個語者 (same, absolutely sure)</li>
             <li>不大確定，但傾向認為是同一個語者 (same, not sure)</li>
             <li>不大確定，但傾向認為是不同語者 (different, not sure)</li>
             <li>確定是不同語者 (different, absolutely sure)</li>
         </ul>
+        <b> Please remember to click the "Submit" botton after finishing.</b>
+        (<b>在结束之前，请点击 "Submit" 按钮。</b>)
     </p>
 {% endblock %}
 {% block form_questions %}
