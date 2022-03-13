@@ -17,7 +17,7 @@ def main():
         questions=[
             {
                 "title": "Group１- Audio1",
-                "audio_path": [
+                "audio_paths": [
                     "audios/2/JTAN_sing_15-chunk-11_ADIZ_18_f0factor1.8_ldfactor0.0.wav",
                     "audios/0/ADIZ_sing_01-chunk-05.wav"
                 ],
@@ -25,7 +25,7 @@ def main():
             },
             {
                 "title": "Group１- Audio2",
-                "audio_path": [
+                "audio_paths": [
                     "audios/12/ADIZ_18.wav",
                     "audios/0/ADIZ_sing_01-chunk-05.wav"
                 ],
@@ -33,7 +33,7 @@ def main():
             },
             {
                 "title": "Group１- Audio3",
-                "audio_path": [
+                "audio_paths": [
                     "audios/3/NJAT_sing_15-chunk-20_ADIZ_18_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/ADIZ_sing_01-chunk-05.wav"
                 ],
@@ -41,7 +41,7 @@ def main():
             },
             {
                 "title": "Group１- Audio4",
-                "audio_path": [
+                "audio_paths": [
                     "audios/4/JTAN_sing_15-chunk-11_ADIZ_18_f0factor1.8_ldfactor0.0.wav",
                     "audios/0/ADIZ_sing_01-chunk-05.wav"
                 ],
@@ -49,7 +49,7 @@ def main():
             },
             {
                 "title": "Group１- Audio5",
-                "audio_path": [
+                "audio_paths": [
                     "audios/5/NJAT_sing_15-chunk-20_ADIZ_18_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/ADIZ_sing_01-chunk-05.wav"
                 ],
@@ -57,7 +57,7 @@ def main():
             },
             {
                 "title": "Group１- Audio6",
-                "audio_path": [
+                "audio_paths": [
                     "audios/1/NJAT_sing_15-chunk-20_ADIZ_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/ADIZ_sing_01-chunk-05.wav"
                 ],
@@ -67,7 +67,7 @@ def main():
 
             {
                 "title": "Group2 - Audio1",
-                "audio_path": [
+                "audio_paths": [
                     "audios/2/SAMF_sing_13-chunk-01_JLEE_11_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/JLEE_sing_08-chunk-17.wav"
                 ],
@@ -75,7 +75,7 @@ def main():
             },
             {
                 "title": "Group2 - Audio2",
-                "audio_path": [
+                "audio_paths": [
                     "audios/3/JTAN_sing_15-chunk-11_JLEE_11_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/JLEE_sing_08-chunk-17.wav"
                 ],
@@ -83,7 +83,7 @@ def main():
             },
             {
                 "title": "Group2 - Audio3",
-                "audio_path": [
+                "audio_paths": [
                     "audios/4/MPUR_sing_06-chunk-20_JLEE_11_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/JLEE_sing_08-chunk-17.wav"
                 ],
@@ -91,7 +91,7 @@ def main():
             },
                         {
                 "title": "Group2 - Audio4",
-                "audio_path": [
+                "audio_paths": [
                     "audios/12/JLEE_11.wav",
                     "audios/0/JLEE_sing_08-chunk-17.wav"
                 ],
@@ -99,7 +99,7 @@ def main():
             },
             {
                 "title": "Group2 - Audio5",
-                "audio_path": [
+                "audio_paths": [
                     "audios/1/ADIZ_sing_01-chunk-05_JLEE_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/JLEE_sing_08-chunk-17.wav"
                 ],
@@ -107,7 +107,7 @@ def main():
             },
             {
                 "title": "Group2- Audio6",
-                "audio_path": [
+                "audio_paths": [
                     "audios/5/MCUR_sing_04-chunk-00_JLEE_11_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/JLEE_sing_08-chunk-17.wav"
                 ],
@@ -116,7 +116,7 @@ def main():
 
             {
                 "title": "Group3 - Audio1",
-                "audio_path": [
+                "audio_paths": [
                     "audios/3/ZHIY_sing_14-chunk-10-part-00_JTAN_07_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/JTAN_sing_15-chunk-11.wav"
                 ],
@@ -124,7 +124,7 @@ def main():
             },
             {
                 "title": "Group3 - Audio2",
-                "audio_path": [
+                "audio_paths": [
                     "audios/4/JLEE_sing_08-chunk-17_JTAN_07_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/JTAN_sing_15-chunk-11.wav"
                 ],
@@ -132,7 +132,7 @@ def main():
             },
             {
                 "title": "Group3 - Audio3",
-                "audio_path": [
+                "audio_paths": [
                     "audios/5/JLEE_sing_08-chunk-17_JTAN_07_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/JTAN_sing_15-chunk-11.wav"
                 ],
@@ -140,7 +140,7 @@ def main():
             },
             {
                 "title": "Group3 - Audio4",
-                "audio_path": [
+                "audio_paths": [
                     "audios/12/JTAN_07.wav",
                     "audios/0/JTAN_sing_15-chunk-11.wav"
                 ],
@@ -148,7 +148,7 @@ def main():
             },
             {
                 "title": "Group3 - Audio5",
-                "audio_path": [
+                "audio_paths": [
                     "audios/1/MPUR_sing_06-chunk-20_JTAN_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/JTAN_sing_15-chunk-11.wav"
                 ],
@@ -156,7 +156,7 @@ def main():
             },
             {
                 "title": "Group3 - Audio6",
-                "audio_path": [
+                "audio_paths": [
                     "audios/2/NJAT_sing_15-chunk-20_JTAN_07_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/JTAN_sing_15-chunk-11.wav"
                 ],
@@ -165,7 +165,7 @@ def main():
 
             {
                 "title": "Group4 - Audio１",
-                "audio_path": [
+                "audio_paths": [
                     "audios/12/KENN_10.wav",
                     "audios/0/KENN_sing_17-chunk-15-part-00.wav"
                 ],
@@ -173,7 +173,7 @@ def main():
             },
             {
                 "title": "Group4 - Audio2",
-                "audio_path": [
+                "audio_paths": [
                     "audios/1/PMAR_sing_11-chunk-10-part-00_KENN_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/KENN_sing_17-chunk-15-part-00.wav"
                 ],
@@ -181,7 +181,7 @@ def main():
             },
             {
                 "title": "Group4 - Audio3",
-                "audio_path": [
+                "audio_paths": [
                     "audios/2/MPOL_sing_11-chunk-12_KENN_10_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/KENN_sing_17-chunk-15-part-00.wav"
                 ],
@@ -189,7 +189,7 @@ def main():
             },
             {
                 "title": "Group4 - Audio4",
-                "audio_path": [
+                "audio_paths": [
                     "audios/3/NJAT_sing_15-chunk-20_KENN_10_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/KENN_sing_17-chunk-15-part-00.wav"
                 ],
@@ -197,7 +197,7 @@ def main():
             },
             {
                 "title": "Group4 - Audio5",
-                "audio_path": [
+                "audio_paths": [
                     "audios/4/JTAN_sing_15-chunk-11_KENN_10_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/KENN_sing_17-chunk-15-part-00.wav"
                 ],
@@ -205,7 +205,7 @@ def main():
             },
             {
                 "title": "Group4 - Audio6",
-                "audio_path": [
+                "audio_paths": [
                     "audios/5/NJAT_sing_15-chunk-20_KENN_10_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/KENN_sing_17-chunk-15-part-00.wav"
                 ],
@@ -214,7 +214,7 @@ def main():
 
             {
                 "title": "Group5 - Audio1",
-                "audio_path": [
+                "audio_paths": [
                     "audios/2/VKOW_sing_19-chunk-24_MCUR_17_f0factor1.8_ldfactor0.0.wav",
                     "audios/0/MCUR_sing_04-chunk-00.wav"
                 ],
@@ -222,7 +222,7 @@ def main():
             },
             {
                 "title": "Group5 - Audio2",
-                "audio_path": [
+                "audio_paths": [
                     "audios/3/VKOW_sing_19-chunk-24_MCUR_17_f0factor1.8_ldfactor0.0.wav",
                     "audios/0/MCUR_sing_04-chunk-00.wav"
                 ],
@@ -230,7 +230,7 @@ def main():
             },
                         {
                 "title": "Group5 - Audio3",
-                "audio_path": [
+                "audio_paths": [
                     "audios/12/MCUR_17.wav",
                     "audios/0/MCUR_sing_04-chunk-00.wav"
                 ],
@@ -238,7 +238,7 @@ def main():
             },
             {
                 "title": "Group5 - Audio4",
-                "audio_path": [
+                "audio_paths": [
                     "audios/1/JLEE_sing_08-chunk-17_MCUR_f0factor1.8_ldfactor0.0.wav",
                     "audios/0/MCUR_sing_04-chunk-00.wav"
                 ],
@@ -246,7 +246,7 @@ def main():
             },
             {
                 "title": "Group5 - Audio5",
-                "audio_path": [
+                "audio_paths": [
                     "audios/4/KENN_sing_17-chunk-15-part-00_MCUR_17_f0factor1.8_ldfactor0.0.wav",
                     "audios/0/MCUR_sing_04-chunk-00.wav"
                 ],
@@ -254,7 +254,7 @@ def main():
             },
             {
                 "title": "Group5 - Audio6",
-                "audio_path": [
+                "audio_paths": [
                     "audios/5/PMAR_sing_11-chunk-10-part-00_MCUR_17_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/MCUR_sing_04-chunk-00.wav"
                 ],
@@ -263,7 +263,7 @@ def main():
 
             {
                 "title": "Group6 - Audio1",
-                "audio_path": [
+                "audio_paths": [
                     "audios/1/KENN_sing_17-chunk-15-part-00_MPOL_f0factor1.8_ldfactor0.0.wav",
                     "audios/0/MPOL_sing_11-chunk-12.wav"
                 ],
@@ -271,7 +271,7 @@ def main():
             },
             {
                 "title": "Group6 - Audio2",
-                "audio_path": [
+                "audio_paths": [
                     "audios/4/ADIZ_sing_01-chunk-05_MPOL_20_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/MPOL_sing_11-chunk-12.wav"
                 ],
@@ -279,7 +279,7 @@ def main():
             },
             {
                 "title": "Group6 - Audio3",
-                "audio_path": [
+                "audio_paths": [
                     "audios/5/NJAT_sing_15-chunk-20_MPOL_20_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/MPOL_sing_11-chunk-12.wav"
                 ],
@@ -287,7 +287,7 @@ def main():
             },
             {
                 "title": "Group6 - Audio4",
-                "audio_path": [
+                "audio_paths": [
                     "audios/12/MPOL_20.wav",
                     "audios/0/MPOL_sing_11-chunk-12.wav"
                 ],
@@ -295,7 +295,7 @@ def main():
             },
             {
                 "title": "Group6 - Audio5",
-                "audio_path": [
+                "audio_paths": [
                     "audios/2/MCUR_sing_04-chunk-00_MPOL_20_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/MPOL_sing_11-chunk-12.wav"
                 ],
@@ -303,7 +303,7 @@ def main():
             },
             {
                 "title": "Group6 - Audio6",
-                "audio_path": [
+                "audio_paths": [
                     "audios/3/ADIZ_sing_01-chunk-05_MPOL_20_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/MPOL_sing_11-chunk-12.wav"
                 ],
@@ -312,7 +312,7 @@ def main():
 
             {
                 "title": "Group7 - Audio1",
-                "audio_path": [
+                "audio_paths": [
                     "audios/1/SAMF_sing_13-chunk-01_MPUR_f0factor1.8_ldfactor0.0.wav",
                     "audios/0/MPUR_sing_06-chunk-20.wav"
                 ],
@@ -320,7 +320,7 @@ def main():
             },
             {
                 "title": "Group7 - Audio2",
-                "audio_path": [
+                "audio_paths": [
                     "audios/2/PMAR_sing_11-chunk-10-part-00_MPUR_02_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/MPUR_sing_06-chunk-20.wav"
                 ],
@@ -328,7 +328,7 @@ def main():
             },
             {
                 "title": "Group7 - Audio3",
-                "audio_path": [
+                "audio_paths": [
                     "audios/12/MPUR_02.wav",
                     "audios/0/MPUR_sing_06-chunk-20.wav"
                 ],
@@ -336,7 +336,7 @@ def main():
             },
             {
                 "title": "Group7 - Audio4",
-                "audio_path": [
+                "audio_paths": [
                     "audios/3/JLEE_sing_08-chunk-17_MPUR_02_f0factor1.8_ldfactor0.0.wav",
                     "audios/0/MPUR_sing_06-chunk-20.wav"
                 ],
@@ -344,7 +344,7 @@ def main():
             },
             {
                 "title": "Group7 - Audio5",
-                "audio_path": [
+                "audio_paths": [
                     "audios/5/PMAR_sing_11-chunk-10-part-00_MPUR_02_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/MPUR_sing_06-chunk-20.wav"
                 ],
@@ -352,7 +352,7 @@ def main():
             },
             {
                 "title": "Group7 - Audio6",
-                "audio_path": [
+                "audio_paths": [
                     "audios/4/PMAR_sing_11-chunk-10-part-00_MPUR_02_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/MPUR_sing_06-chunk-20.wav"
                 ],
@@ -361,7 +361,7 @@ def main():
 
             {
                 "title": "Group8 - Audio1",
-                "audio_path": [
+                "audio_paths": [
                     "audios/4/SAMF_sing_13-chunk-01_NJAT_16_f0factor1.8_ldfactor0.0.wav",
                     "audios/0/NJAT_sing_15-chunk-20.wav"
                 ],
@@ -369,7 +369,7 @@ def main():
             },
             {
                 "title": "Group8 - Audio2",
-                "audio_path": [
+                "audio_paths": [
                     "audios/1/JTAN_sing_15-chunk-11_NJAT_f0factor1.8_ldfactor0.0.wav",
                     "audios/0/NJAT_sing_15-chunk-20.wav"
                 ],
@@ -377,7 +377,7 @@ def main():
             },
             {
                 "title": "Group8- Audio3",
-                "audio_path": [
+                "audio_paths": [
                     "audios/2/PMAR_sing_11-chunk-10-part-00_NJAT_16_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/NJAT_sing_15-chunk-20.wav"
                 ],
@@ -385,7 +385,7 @@ def main():
             },
             {
                 "title": "Group8 - Audio4",
-                "audio_path": [
+                "audio_paths": [
                     "audios/12/NJAT_16.wav",
                     "audios/0/NJAT_sing_15-chunk-20.wav"
                 ],
@@ -393,7 +393,7 @@ def main():
             },
             {
                 "title": "Group8 - Audio5",
-                "audio_path": [
+                "audio_paths": [
                     "audios/3/ZHIY_sing_14-chunk-10-part-00_NJAT_16_f0factor1.8_ldfactor0.0.wav",
                     "audios/0/NJAT_sing_15-chunk-20.wav"
                 ],
@@ -401,7 +401,7 @@ def main():
             },
             {
                 "title": "Group8 - Audio6",
-                "audio_path": [
+                "audio_paths": [
                     "audios/5/JTAN_sing_15-chunk-11_NJAT_16_f0factor1.8_ldfactor0.0.wav",
                     "audios/0/NJAT_sing_15-chunk-20.wav"
                 ],
@@ -410,7 +410,7 @@ def main():
 
             {
                 "title": "Group9 - Audio1",
-                "audio_path": [
+                "audio_paths": [
                     "audios/1/MPUR_sing_06-chunk-20_PMAR_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/PMAR_sing_11-chunk-10-part-00.wav"
                 ],
@@ -418,7 +418,7 @@ def main():
             },
             {
                 "title": "Group9 - Audio2",
-                "audio_path": [
+                "audio_paths": [
                     "audios/12/PAMR_15.wav",
                     "audios/0/PMAR_sing_11-chunk-10-part-00.wav"
                 ],
@@ -426,7 +426,7 @@ def main():
             },
             {
                 "title": "Group9 - Audio3",
-                "audio_path": [
+                "audio_paths": [
                     "audios/2/NJAT_sing_15-chunk-20_PAMR_15_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/PMAR_sing_11-chunk-10-part-00.wav"
                 ],
@@ -434,7 +434,7 @@ def main():
             },
             {
                 "title": "Group9 - Audio4",
-                "audio_path": [
+                "audio_paths": [
                     "audios/4/KENN_sing_17-chunk-15-part-00_PAMR_15_f0factor1.8_ldfactor0.0.wav",
                     "audios/0/PMAR_sing_11-chunk-10-part-00.wav"
                 ],
@@ -442,7 +442,7 @@ def main():
             },
             {
                 "title": "Group9 - Audio5",
-                "audio_path": [
+                "audio_paths": [
                     "audios/5/VKOW_sing_19-chunk-24_PAMR_15_f0factor1.8_ldfactor0.0.wav",
                     "audios/0/PMAR_sing_11-chunk-10-part-00.wav"
                 ],
@@ -450,7 +450,7 @@ def main():
             },
             {
                 "title": "Group9 - Audio6",
-                "audio_path": [
+                "audio_paths": [
                     "audios/3/MPOL_sing_11-chunk-12_PAMR_15_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/PMAR_sing_11-chunk-10-part-00.wav"
                 ],
@@ -459,7 +459,7 @@ def main():
 
             {
                 "title": "Group10 - Audio1",
-                "audio_path": [
+                "audio_paths": [
                     "audios/2/KENN_sing_17-chunk-15-part-00_SAMF_13_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/SAMF_sing_13-chunk-01.wav"
                 ],
@@ -467,7 +467,7 @@ def main():
             },
             {
                 "title": "Group10 - Audio2",
-                "audio_path": [
+                "audio_paths": [
                     "audios/5/MCUR_sing_04-chunk-00_SAMF_13_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/SAMF_sing_13-chunk-01.wav"
                 ],
@@ -475,7 +475,7 @@ def main():
             },
             {
                 "title": "Group10 - Audio3",
-                "audio_path": [
+                "audio_paths": [
                     "audios/12/SAMF_13.wav",
                     "audios/0/SAMF_sing_13-chunk-01.wav"
                 ],
@@ -483,7 +483,7 @@ def main():
             },
             {
                 "title": "Group10 - Audio4",
-                "audio_path": [
+                "audio_paths": [
                     "audios/1/PMAR_sing_11-chunk-10-part-00_SAMF_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/SAMF_sing_13-chunk-01.wav"
                 ],
@@ -491,7 +491,7 @@ def main():
             },
             {
                 "title": "Group10 - Audio5",
-                "audio_path": [
+                "audio_paths": [
                     "audios/3/NJAT_sing_15-chunk-20_SAMF_13_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/SAMF_sing_13-chunk-01.wav"
                 ],
@@ -499,7 +499,7 @@ def main():
             },
             {
                 "title": "Group10 - Audio6",
-                "audio_path": [
+                "audio_paths": [
                     "audios/4/ADIZ_sing_01-chunk-05_SAMF_13_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/SAMF_sing_13-chunk-01.wav"
                 ],
@@ -508,7 +508,7 @@ def main():
 
             {
                 "title": "Group11 - Audio1",
-                "audio_path": [
+                "audio_paths": [
                     "audios/3/PMAR_sing_11-chunk-10-part-00_VKOW_11_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/VKOW_sing_19-chunk-24.wav"
                 ],
@@ -516,7 +516,7 @@ def main():
             },
             {
                 "title": "Group11 - Audio2",
-                "audio_path": [
+                "audio_paths": [
                     "audios/4/MPUR_sing_06-chunk-20_VKOW_11_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/VKOW_sing_19-chunk-24.wav"
                 ],
@@ -524,7 +524,7 @@ def main():
             },
             {
                 "title": "Group11 - Audio3",
-                "audio_path": [
+                "audio_paths": [
                     "audios/5/MPOL_sing_11-chunk-12_VKOW_11_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/VKOW_sing_19-chunk-24.wav"
                 ],
@@ -532,7 +532,7 @@ def main():
             },
             {
                 "title": "Group11 - Audio4",
-                "audio_path": [
+                "audio_paths": [
                     "audios/12/VKOW_11.wav",
                     "audios/0/VKOW_sing_19-chunk-24.wav"
                 ],
@@ -540,7 +540,7 @@ def main():
             },
             {
                 "title": "Group11 - Audio5",
-                "audio_path": [
+                "audio_paths": [
                     "audios/1/MPOL_sing_11-chunk-12_VKOW_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/VKOW_sing_19-chunk-24.wav"
                 ],
@@ -548,7 +548,7 @@ def main():
             },
             {
                 "title": "Group11 - Audio6",
-                "audio_path": [
+                "audio_paths": [
                     "audios/2/MPOL_sing_11-chunk-12_VKOW_11_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/VKOW_sing_19-chunk-24.wav"
                 ],
@@ -557,7 +557,7 @@ def main():
 
             {
                 "title": "Group12 - Audio1",
-                "audio_path": [
+                "audio_paths": [
                     "audios/12/ZHIY_03.wav",
                     "audios/0/ZHIY_sing_14-chunk-10-part-00.wav"
                 ],
@@ -565,7 +565,7 @@ def main():
             },
             {
                 "title": "Group12 - Audio2",
-                "audio_path": [
+                "audio_paths": [
                     "audios/3/JTAN_sing_15-chunk-11_ZHIY_03_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/ZHIY_sing_14-chunk-10-part-00.wav"
                 ],
@@ -573,7 +573,7 @@ def main():
             },
             {
                 "title": "Group12 - Audio3",
-                "audio_path": [
+                "audio_paths": [
                     "audios/4/JLEE_sing_08-chunk-17_ZHIY_03_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/ZHIY_sing_14-chunk-10-part-00.wav"
                 ],
@@ -581,7 +581,7 @@ def main():
             },
             {
                 "title": "Group12 - Audio4",
-                "audio_path": [
+                "audio_paths": [
                     "audios/1/KENN_sing_17-chunk-15-part-00_ZHIY_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/ZHIY_sing_14-chunk-10-part-00.wav"
                 ],
@@ -589,7 +589,7 @@ def main():
             },
             {
                 "title": "Group12 - Audio5",
-                "audio_path": [
+                "audio_paths": [
                     "audios/2/VKOW_sing_19-chunk-24_ZHIY_03_f0factor1.0_ldfactor0.0.wav",
                     "audios/0/ZHIY_sing_14-chunk-10-part-00.wav"
                 ],
@@ -597,7 +597,7 @@ def main():
             },
             {
                 "title": "Group12 - Audio6",
-                "audio_path": [
+                "audio_paths": [
                     "audios/5/MCUR_sing_04-chunk-00_ZHIY_03_f0factor0.6_ldfactor0.0.wav",
                     "audios/0/ZHIY_sing_14-chunk-10-part-00.wav"
                 ],
