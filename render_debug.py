@@ -12,7 +12,7 @@ def main():
 
     html = template.render(
         page_title="MOS 實驗表單 1",
-        form_url="https://script.google.com/macros/s/AKfycbyw0OY8j3OfZ5TaMoJyjf9xwjAx_FyA0ObQL4C7Va1X-oRMaDuP7dVIp7dH8C79PuSD/exec",
+        form_url="https://script.google.com/macros/s/AKfycbxTl5y0iFZ-PeE7n72ymIvikU3aHdHs0Xbsi1lJqIADHcJcEytzUyA2ZjcuX1HfygIU/exec",
         form_id=1,
         questions=[
             {

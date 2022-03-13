@@ -10,7 +10,7 @@ function doGet(e) {
 
 for (var i = 1; i <= 1; i++) {
     for (var j = 0; j <= 1; j++){
-        Sheet.getRange(LastRow+1, 1+i).setValue(params["g" + i.toString()+'-q'+ j.toString()]);
+        Sheet.getRange(LastRow+1, 1+(i-1)*6+j+1).setValue(params["g" + i.toString()+'-q'+ j.toString()]);
     }
 }
 
