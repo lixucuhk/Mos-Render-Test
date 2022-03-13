@@ -8,9 +8,11 @@ function doGet(e) {
 
  Sheet.getRange(LastRow+1, 1).setValue(params.name);
 
- for (var i = 1; i <= 18; i++) {
-  Sheet.getRange(LastRow+1, 1+i).setValue(params["q" + i.toString()]);
- }
+for (var i = 1; i <= 1; i++) {
+    for (var j = 0; j <= 1; j++){
+        Sheet.getRange(LastRow+1, 1+i).setValue(params["g" + i.toString()+'-q'+ j.toString()]);
+    }
+}
 
  return ContentService.createTextOutput(params.thank);
 }

@@ -5,7 +5,7 @@
     <title>MOS 實驗表單 1</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://docs.google.com/forms/d/1MS4Swww0GRdQ0cta26-KL7pDViynW-pzDX0-Kdm1cpA/edit"
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
         integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
 </head>
 
@@ -50,7 +50,7 @@
     </div>
 
     <div class="container" id="form_container">
-        <form id="theForm" action="https://script.google.com/macros/s/AKfycbzlwvyfbZQJQ6yfjrRjaPoBArriqW4Z-ydgMxBto-zgP7erZBquuJtetl3KEkuI0ueG/exec" method="GET" onsubmit="return preventRepeatedSubmission();">
+        <form id="theForm" action="https://script.google.com/macros/s/AKfycbyw0OY8j3OfZ5TaMoJyjf9xwjAx_FyA0ObQL4C7Va1X-oRMaDuP7dVIp7dH8C79PuSD/exec" method="GET" onsubmit="return preventRepeatedSubmission();">
             <div class="form-group">
                 <label for="name">匿称：</label>
                 <input class="form-control" type="text" inputmode="text" name="name" required>
@@ -70,40 +70,90 @@
                 Text: 
                 </p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_1" value="1" required>
-                    <label class="form-check-label" for="g1-q2_1">１（Unsatisfactory）</label>
+                    <input class="form-check-input" type="radio" name="g1-q1" id="g1-q1_1" value="1" required>
+                    <label class="form-check-label" for="g1-q1_1">１（Unsatisfactory）</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_1.5" value="1.5" required>
-                    <label class="form-check-label" for="g1-q2_1.5">1.5 (in-between Unsatisfactory and Poor) </label>
+                    <input class="form-check-input" type="radio" name="g1-q1" id="g1-q1_1.5" value="1.5" required>
+                    <label class="form-check-label" for="g1-q1_1.5">1.5 (in-between Unsatisfactory and Poor) </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_2" value="2" required>
-                    <label class="form-check-label" for="g1-q2_2">２（Poor）</label>
+                    <input class="form-check-input" type="radio" name="g1-q1" id="g1-q1_2" value="2" required>
+                    <label class="form-check-label" for="g1-q1_2">２（Poor）</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_2.5" value="2.5" required>
-                    <label class="form-check-label" for="g1-q2_2.5">2.5 (in-between Poor and Fair)</label>
+                    <input class="form-check-input" type="radio" name="g1-q1" id="g1-q1_2.5" value="2.5" required>
+                    <label class="form-check-label" for="g1-q1_2.5">2.5 (in-between Poor and Fair)</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_3" value="3" required>
-                    <label class="form-check-label" for="g1-q2_3">３（Fair）</label>
+                    <input class="form-check-input" type="radio" name="g1-q1" id="g1-q1_3" value="3" required>
+                    <label class="form-check-label" for="g1-q1_3">３（Fair）</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_3.5" value="3.5" required>
-                    <label class="form-check-label" for="g1-q2_3.5">3.5 (in-between Fair and Good)</label>
+                    <input class="form-check-input" type="radio" name="g1-q1" id="g1-q1_3.5" value="3.5" required>
+                    <label class="form-check-label" for="g1-q1_3.5">3.5 (in-between Fair and Good)</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_4" value="4" required>
-                    <label class="form-check-label" for="g1-q2_4">４（Good）</label>
+                    <input class="form-check-input" type="radio" name="g1-q1" id="g1-q1_4" value="4" required>
+                    <label class="form-check-label" for="g1-q1_4">４（Good）</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_4.5" value="4.5" required>
-                    <label class="form-check-label" for="g1-q2_4.5">4.5 (in-between Good and Excellent)</label>
+                    <input class="form-check-input" type="radio" name="g1-q1" id="g1-q1_4.5" value="4.5" required>
+                    <label class="form-check-label" for="g1-q1_4.5">4.5 (in-between Good and Excellent)</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="g1-q2" id="g1-q2_5" value="5" required>
-                    <label class="form-check-label" for="g1-q2_5">５（Excellent）</label>
+                    <input class="form-check-input" type="radio" name="g1-q1" id="g1-q1_5" value="5" required>
+                    <label class="form-check-label" for="g1-q1_5">５（Excellent）</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Group１- Audio2</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/3/NJAT_sing_15-chunk-20_ADIZ_18_f0factor1.0_ldfactor0.0.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                Text: 
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q0" id="g1-q0_1" value="1" required>
+                    <label class="form-check-label" for="g1-q0_1">１（Unsatisfactory）</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q0" id="g1-q0_1.5" value="1.5" required>
+                    <label class="form-check-label" for="g1-q0_1.5">1.5 (in-between Unsatisfactory and Poor) </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q0" id="g1-q0_2" value="2" required>
+                    <label class="form-check-label" for="g1-q0_2">２（Poor）</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q0" id="g1-q0_2.5" value="2.5" required>
+                    <label class="form-check-label" for="g1-q0_2.5">2.5 (in-between Poor and Fair)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q0" id="g1-q0_3" value="3" required>
+                    <label class="form-check-label" for="g1-q0_3">３（Fair）</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q0" id="g1-q0_3.5" value="3.5" required>
+                    <label class="form-check-label" for="g1-q0_3.5">3.5 (in-between Fair and Good)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q0" id="g1-q0_4" value="4" required>
+                    <label class="form-check-label" for="g1-q0_4">４（Good）</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q0" id="g1-q0_4.5" value="4.5" required>
+                    <label class="form-check-label" for="g1-q0_4.5">4.5 (in-between Good and Excellent)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="g1-q0" id="g1-q0_5" value="5" required>
+                    <label class="form-check-label" for="g1-q0_5">５（Excellent）</label>
                 </div>
             </div>
         </div>
@@ -119,7 +169,7 @@
     </div>
 
     <div class="container" style="padding-top: 60px;">
-        <p class="text-center text-muted">&copy; Tencent AI Lab</p>
+        <p class="text-center text-muted">&copy; Tencent ARC Lab</p>
     </div>
 
     <script type="text/javascript">
